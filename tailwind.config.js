@@ -8,6 +8,7 @@ content: [
     extend: {
       colors:{
         bgcolor: "#e3f1fe",
+        hovercolor: "#b1e7ff",
       }
     },
   },

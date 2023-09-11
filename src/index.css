@@ -2,19 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-
-html {
-  overflow: hidden;
+ html {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-}
+} 
 
 html,
 body {
-background: #e3f1fe;
-  height: 100%;
-  color:black
+  background: #e3f1fe;
+  color: black;
 }
