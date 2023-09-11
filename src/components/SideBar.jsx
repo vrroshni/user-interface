@@ -19,7 +19,7 @@ const SideBar = () => {
     }, []);
 
     return (
-        <div className="flex ">
+        <div className="flex h-auto">
             <div className={` ${open ? "w-44 p-0" : "w-20  p-5 "} bg-white pt-8 relative duration-300 shadow-lg`}>
                 <img src="./src/assets/control.png" className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple border-2 rounded-full  ${!open && "rotate-180"}`} onClick={() => setOpen(!open)} />
                 <div className={`flex flex-col gap-x-4 items-center ${open && "shadow-xl pb-4"}`} >
@@ -55,7 +55,7 @@ const SideBar = () => {
                         icon={<BiSolidDashboard size={26} />}
                         title={"Xyz EnterPrises Pvt. Ltd"}
                         open={open}
-                        classNames={" md:hidden w-full text-blue-800"}
+                        classNames={"md:hidden w-full text-blue-800"}
                     />
                     <MenuItem
                         icon={<BiSolidDashboard size={26} />}
@@ -65,10 +65,10 @@ const SideBar = () => {
                     />
                 </div>
             </div>
-            <div className="h-screen  flex-1  md:pr-20">
-               
-                    <Dashboard />
-                
+            <div className="flex-1 bg-white md:mr-20">
+
+                <Dashboard />
+
 
             </div>
         </div>

@@ -5,13 +5,13 @@ function App() {
 
 
   return (
-    <div className="w-full min-h-screen" >
+    <  >
       <Header />
       <SideBar />
 
 
 
-    </div>
+    </>
   )
 }
 
