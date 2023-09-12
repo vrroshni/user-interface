@@ -1,7 +1,17 @@
 import { BsArrowRight, BsPerson } from 'react-icons/bs';
 import { HiMiniPlay } from 'react-icons/hi2';
 
-
+/**
+ * PricingCard component displays subscription plan details.
+ *
+ * @param {string} btncolor - Button background color.
+ * @param {string} title - Plan title.
+ * @param {string} priceMonthly - Monthly price.
+ * @param {string} priceYearly - Yearly price.
+ * @param {Array} features - Array of plan features and icons.
+ * @param {string} symbolcolor - Color for additional symbol.
+ * @returns {JSX.Element} JSX element for the PricingCard component.
+ */
 
 export const PricingCard = ({ btncolor, title, priceMonthly, priceYearly, features, symbolcolor }) => {
     return (
@@ -37,7 +47,17 @@ export const PricingCard = ({ btncolor, title, priceMonthly, priceYearly, featur
 export default PricingCard;
 
 
-
+/**
+ * BundleCard component displays bundled plan details.
+ *
+ * @param {string} title - Bundle title.
+ * @param {string} description - Bundle description.
+ * @param {string} price - Bundle price.
+ * @param {string} buttonText - Action button text.
+ * @param {string} buttonColor - Action button background color.
+ * @param {Array} features - Array of bundled features and icons.
+ * @returns {JSX.Element} JSX element for the BundleCard component.
+ */
 
 
 export const BundleCard = ({ title, description, price, buttonText, buttonColor, features }) => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { MenuItem } from "./elements/Helper";
 import { BiPowerOff, BiSolidChevronLeft, BiSolidChevronRight } from "react-icons/bi";
 import { menus } from "../utils/data";
@@ -6,25 +6,16 @@ import useResponsiveSidebar from "../utils/hooks";
 import { BsPersonWorkspace } from "react-icons/bs";
 
 const SideBar = () => {
-    // const [open, setOpen] = useState(true);
 
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //         if (window.innerWidth < 768) {
-    //             setOpen(false)
-    //         } else {
-    //             setOpen(true)
-    //         }
-    //     }
-    //     window.addEventListener('resize', handleResize);
-    //     return () => window.removeEventListener('resize', handleResize);
-    // }, []);
-    const {open,setOpen } = useResponsiveSidebar()
+    // Custom hook to handle sidebar responsiveness
+    const { open, setOpen } = useResponsiveSidebar()
     return (
 
         <div className={` ${open ? "w-44 p-0" : "w-20  p-5 "} bg-white pt-8 relative duration-150 shadow-lg`}>
-            {/* <img src="./src/assets/control.png" className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple border-2 rounded-full  ${!open && "rotate-180"}`} onClick={() => setOpen(!open)} /> */}
-            <BiSolidChevronLeft className={`absolute cursor-pointer -right-3 top-9 w-6 h-6 border-gray-200 shadow-sm border-2 rounded-full  ${!open && "rotate-180"}`} onClick={() => setOpen(!open)}  />
+            {/* Sidebar toggle button */}
+            <BiSolidChevronLeft className={`absolute cursor-pointer -right-3 top-9 w-6 h-6 border-gray-200 shadow-sm border-2 rounded-full  ${!open && "rotate-180"}`} onClick={() => setOpen(!open)} />
+
+            {/* Userprofile and logo  image */}
             <div className={`flex flex-col gap-x-4 items-center ${open && "shadow-xl pb-4"}`} >
                 <div className="md:hidden w-12 h-12  flex flex-col justify-center items-center mb-5">
                     <img className={`cursor-pointer duration-500 ${open && "rounded-full border border-gray-100 shadow-sm rotate-[360deg]"}`}
@@ -42,6 +33,7 @@ const SideBar = () => {
                 </p>
             </div>
 
+            {/* Sidebar menu items */}
             <div className={`pt-6 ${open && "mr-6"}`}>
                 {menus.map((menu) => (
                     <MenuItem
@@ -53,6 +45,8 @@ const SideBar = () => {
                 ))}
             </div>
 
+
+            {/* Bottom menu items */}
             <div className={`absolute bottom-0 ${open && "w-full"} `}>
                 <MenuItem
                     icon={<BsPersonWorkspace size={26} />}

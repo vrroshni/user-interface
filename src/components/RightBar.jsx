@@ -2,6 +2,11 @@ import React from 'react'
 import { BsFillBellFill } from 'react-icons/bs'
 import { HiOutlinePlus } from 'react-icons/hi2'
 
+
+/**
+ * A component representing the right sidebar containing notification and action buttons.
+ */
+
 const RightBar = () => {
     return (
         <div className='  flex flex-col justify-between h-1/3  lg:h-full' >

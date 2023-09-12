@@ -9,7 +9,6 @@ function App() {
   return (
     <  >
       <Header />
-
       <div className="flex h-auto">
         <SideBar />
         <div className="flex-1 bg-white mr-3  md:mr-7">

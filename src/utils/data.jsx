@@ -5,7 +5,7 @@ import { HiMiniChatBubbleLeftRight } from 'react-icons/hi2'
 import { MdOutlineSupportAgent } from 'react-icons/md'
 import { AiOutlineMail } from 'react-icons/ai'
 
-
+// Pricing plans for the dashboard
 export const dashboardplans =
     [
         {
@@ -75,7 +75,7 @@ export const dashboardplans =
             symbolcolor: "text-purple-400"
         }
     ]
-
+// Bundle plans
 export const bundleplans =
     [
         {
@@ -128,7 +128,7 @@ export const bundleplans =
     ]
 
 
-
+// Sidebar menus
 export const menus = [
     {
         id: 1,
