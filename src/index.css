@@ -18,3 +18,23 @@ body {
   background: #e3f1fe;
   color: black;
 }
+
+
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 60%;
+  right: 0;
+  border-top: 1px solid #dd0031!important;
+  border-color: inherit;
+
+  -webkit-transform:rotate(-5deg);
+  -moz-transform:rotate(-5deg);
+  -ms-transform:rotate(-5deg);
+  -o-transform:rotate(-5deg);
+  transform:rotate(10deg);
+}

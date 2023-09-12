@@ -1,14 +1,15 @@
 import React from 'react'
 import PricingCard, { BundleCard, bundleplans, dashboardplans } from './elements/DashboardElements';
-import { BsArrowRight, BsPerson } from 'react-icons/bs';
+import Heading from './elements/Heading';
 
 const Dashboard = () => {
   return (
 
     <div className="flex items-center justify-center bg-white p-1 md:p-4">
-      <div className="flex flex-col max-w-7xl w-full md:w-[80%]">
-        <div className="flex flex-col lg:flex-row">
-          {dashboardplans.map((item, index) => (
+      <div className="flex flex-col max-w-7xl w-full md:w-[90%] mt-3 md:mt-0 ">
+      <Heading text='Choose a plan thats just right for you' className='!text-3xl md:!text-4xl !text-left font-bold my-3 mx-4 ' />
+        <div className="flex flex-col lg:flex-row gap-6">
+          {dashboardplans?.map((item, index) => (
             <PricingCard
               key={index}
               title={item.title}
@@ -21,7 +22,7 @@ const Dashboard = () => {
           ))}
 
         </div>
-        <div class="flex flex-col lg:flex-row">
+        <div class="flex flex-col lg:flex-row gap-6 mt-4 ">
           {bundleplans.map((item) => (
             <BundleCard
               key={item.id}
@@ -34,6 +35,10 @@ const Dashboard = () => {
             />
           ))}
         </div>
+        <div className='mt-1 text-blue-700 flex justify-end mx-4'>
+          *voluptatibus deleniti incidunt est tempore iste voluptas quia. Rem enim fugiat nesciunt odit?
+        </div>
+
       </div>
     </div>
 

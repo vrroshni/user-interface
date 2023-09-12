@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { MenuItem, Menus } from "./elements/helpers";
 import { BiSolidDashboard } from "react-icons/bi";
 import Dashboard from "./Dashboard";
+import RightBar from "./RightBar";
 
 const SideBar = () => {
     const [open, setOpen] = useState(true);
@@ -50,26 +51,27 @@ const SideBar = () => {
                     ))}
                 </div>
 
-                <div className="absolute bottom-0">
+                <div className={`absolute bottom-0 ${open && "w-full"} `}>
                     <MenuItem
                         icon={<BiSolidDashboard size={26} />}
                         title={"Xyz EnterPrises Pvt. Ltd"}
                         open={open}
-                        classNames={"md:hidden w-full text-blue-800"}
+                        classNames={"md:hidden  text-blue-800"}
                     />
                     <MenuItem
                         icon={<BiSolidDashboard size={26} />}
                         title={"Logout"}
                         open={open}
-                        classNames={"w-full text-blue-800"}
+                        classNames={" text-blue-800 mr-0"}
                     />
                 </div>
             </div>
-            <div className="flex-1 bg-white md:mr-20">
-
+            <div className="flex-1 bg-white mr-3  md:mr-7">
                 <Dashboard />
 
-
+            </div>
+            <div className="mt-3">
+                <RightBar/>
             </div>
         </div>
     );
