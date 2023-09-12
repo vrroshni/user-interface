@@ -1,6 +1,7 @@
 import React from 'react'
-import PricingCard, { BundleCard, bundleplans, dashboardplans } from './elements/DashboardElements';
+import PricingCard, { BundleCard} from './elements/DashboardElements';
 import Heading from './elements/Heading';
+import { bundleplans, dashboardplans } from '../utils/data';
 
 const Dashboard = () => {
   return (
@@ -22,7 +23,7 @@ const Dashboard = () => {
           ))}
 
         </div>
-        <div class="flex flex-col lg:flex-row gap-6 mt-4 ">
+        <div className="flex flex-col lg:flex-row gap-6 mt-4 ">
           {bundleplans.map((item) => (
             <BundleCard
               key={item.id}
