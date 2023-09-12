@@ -1,8 +1,22 @@
-# React + Vite
+# UI Machine Task
+## Demo link:
+Access my site at [google.com](https://google.com)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About The App
+This repository contains the code for the UI Machine Task as part of the Arab Industries project. The goal of this task is to create a responsive user interface using React.js that accurately replicates a provided design.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
+I used `html`, `tailwindcss`,  `javascript`, `react`, `vite`.
+This project was bootstrapped with [npm create vite@latest](https://vitejs.dev/guide/).
+
+
+## Setup
+- download or clone the repository
+clone this repo with this link [git clone ](https://vitejs.dev/guide/).
+
+- run `npm install`
+- run `npm run dev`
+
+
+> 
