@@ -24,10 +24,10 @@ export const PricingCard = ({ btncolor, title, priceMonthly, priceYearly, featur
                     <button type="button" className={`${btncolor} focus:outline-none text-black  focus:ring-4  font-medium rounded-lg text-sm px-5 py-1.5 my-2 flex justify-center items-center gap-2 `}>Get Started <BsArrowRight /></button>
                     <hr className='bg-black border h-0.5 my-4' />
                     <div>
-                        <p>What you'll get :</p>
+                        <p className="text-lg">What you'll get :</p>
                         <div className='flex flex-col gap-y-1 pl-1 font-medium pt-1'>
                             {features?.map(({ feature, icon }, index) => (
-                                <p className='flex gap-3 items-center text-sm text-left  ' key={index}>
+                                <p className='flex gap-3 items-center text-base  text-left  ' key={index}>
                                     {icon}
                                     <span>{feature}</span>
                                 </p>
@@ -63,8 +63,8 @@ export default PricingCard;
 export const BundleCard = ({ title, description, price, buttonText, buttonColor, features }) => {
     return (
         <div className="bg-white shadow-xl rounded-xl flex items-start max-w-1/2 w-[90%] lg:w-1/2 justify-center py-4 px-4 mx-4 my-2">
-            <div className="flex items-center justify-start w-full px-2 gap-4">
-                <div className='flex-col w-[55%]'>
+            <div className="flex flex-col md:flex-row items-center justify-start w-full px-2 gap-4">
+                <div className='flex-col w-full md:w-[55%]'>
                     <div className="flex items-center justify-between px-0.5 py-0.5 rounded-xl text-black font-medium mb-2 md:mb-0">
                         <div className={`text-xs px-2 rounded-lg py-1 ${buttonColor}`}>{price}</div>
                     </div>
@@ -79,11 +79,11 @@ export const BundleCard = ({ title, description, price, buttonText, buttonColor,
                         {buttonText} <BsArrowRight />
                     </button>
                 </div>
-                <div className='flex-col w-[45%]'>
-                    <p>What you'll get :</p>
-                    <div className=' flex flex-col gap-y-1 font-medium mt-2'>
+                <div className='flex-col w-full md:w-[45%]'>
+                    <p className="text-lg">What you'll get :</p>
+                    <div className=' flex flex-col gap-y-2  md:gap-y-1 font-medium mt-2 text-base'>
                         {features.map(({feature,icon}, index) => (
-                            <div className=' flex gap-5 text-sm text-left' key={index}>
+                            <div className=' flex gap-x-3  md:gap-5 text-base md:text-sm text-left ' key={index}>
                                <div className='w-4 h-4'> {icon}</div>
                                <div>{feature}</div> 
                             </div>
